@@ -1,0 +1,5 @@
+filter_exec: "Obsidian"
+
+extra_includes:
+  - "../match/_obsidian.yml"
+  - "../match/_latex.yml"

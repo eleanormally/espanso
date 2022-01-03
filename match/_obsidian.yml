@@ -1,0 +1,7 @@
+matches: 
+  - trigger: "!ref"
+    replace: |
+              
+              ---
+              
+              ![[
