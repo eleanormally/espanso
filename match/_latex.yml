@@ -62,7 +62,7 @@ matches:
   - trigger: "!="
     replace: "\neq"
 
-  - regex: "(?P<char>.*)hat"
+  - regex: ":(?P<char>.*)hat"
     replace: "\\hat{{{char}}}"
 
   # shorthand
