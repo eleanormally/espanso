@@ -2,22 +2,22 @@
 matches:
 
   # my latex config
-  - trigger: ":startfile"
+  - trigger: ";startfile"
     replace: |
               \usepackage{amsmath} 
               \usepackage{graphicx}
 
   # special characters
-  - trigger: ":nb"
+  - trigger: ";nb"
     replace: "\\nabla"
 
-  - trigger: ":lb"
+  - trigger: ";lb"
     replace: "\\lambda"
   
-  - trigger: ":dt"
+  - trigger: ";dt"
     replace: "\\delta"
   
-  - trigger: ":th"
+  - trigger: ";th"
     replace: "\\theta"
   
   - trigger: "<="
@@ -29,7 +29,7 @@ matches:
   - trigger: "=>"
     replace: "\\geq"
 
-  - trigger: ":pt"
+  - trigger: ";pt"
     replace: "\\partial "
 
   - trigger: "<<"
@@ -44,25 +44,25 @@ matches:
   - trigger: "+-"
     replace: "\\pm"
 
-  - trigger: ":aa"
+  - trigger: ";aa"
     replace: "\\alpha"
   
-  - trigger: ":phl"
+  - trigger: ";phl"
     replace: "\\oint \\limits_{C}"
 
   - regex: "(?P<char>.)bar"
     replace: "\\bar{{{char}}}"
 
-  - trigger: ":xt"
+  - trigger: ";xt"
     replace: "\\times"
   
-  - trigger: ":*"
+  - trigger: ";*"
     replace: "\\cdot"
 
   - trigger: "!="
     replace: "\neq"
 
-  - regex: ":(?P<char>.*)hat"
+  - regex: ";(?P<char>.*)hat"
     replace: "\\hat{{{char}}}"
 
   # shorthand
@@ -73,13 +73,13 @@ matches:
   - trigger: "r2c"
     replace: "(x,y)"
   
-  - trigger: ":vr"
+  - trigger: ";vr"
     replace: "\\vec{$|$}"
 
-  - trigger: ":ccoordz"
+  - trigger: ";ccoordz"
     replace: "\\{(z,r,\\theta): $|$ \\leq \\theta \\leq, \\leq r \\leq, \\leq z \\leq \\}"
   
-  - trigger: ":scoord"
+  - trigger: ";scoord"
     replace: "\\{(\\rho, \\theta, \\phi): $|$ \\leq \\rho \\leq , \\leq \\theta \\leq , \\leq \\phi \\leq \\}"
   
 
@@ -104,36 +104,36 @@ matches:
   - trigger: "tant"
     replace: "\\tan\\theta"
 
-  - trigger: ":ttil"
+  - trigger: ";ttil"
     replace: "\\int \\limits_{0}^{2\\pi}"
 
-  - trigger: ":til"
+  - trigger: ";til"
     replace: "\\int \\limits_{0}^{\\pi}"
 
-  - trigger: ":ilim"
+  - trigger: ";ilim"
     replace: "\\lim_{\\to\\infty}"
 
-  - trigger: ":lim"
+  - trigger: ";lim"
     replace: "\\lim_{\\to $|$}"
 
-  - trigger: ":il"
+  - trigger: ";il"
     replace: "\\int \\limits_{$|$}^{}"
 
-  - trigger: ":evat"
+  - trigger: ";evat"
     replace: "\\biggr\\rvert_{$|$}^{}"
 
-  - regex: ":ev(?P<var>.*)at"
+  - regex: ";ev(?P<var>.*)at"
     replace: "\\biggr\\rvert_{{{var}}=$|$}^{{{var}}=}"
 
-  - trigger: ":sq"
+  - trigger: ";sq"
     replace: "\\sqrt{$|$}"
 
-  - trigger: ":fc"
+  - trigger: ";fc"
     replace: "\\frac{$|$}{}"
 
-  - regex: ":gd(?P<func>.*) "
+  - regex: ";gd(?P<func>.*) "
     replace: "\\overrightarrow{ \\nabla {{func}}} " 
 
-  - regex: ":(?P<num>.*)/(?P<den>.*) "
+  - regex: ";(?P<num>.*)/(?P<den>.*) "
     replace: "\\frac{ {{num}} }{ {{den}} }"
 
