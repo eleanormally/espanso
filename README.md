@@ -1,6 +1,9 @@
 # espanso
 My personal text expansion toolkit
 
+## Setup
+
+This is literally my espanso config folder. If you wish to copy my setup verbatim replace your config with this one. If you want to add to an existing espanso setup, each app in `config` is clearly labelled so use the ones you want, and put the scripts exactly like they are in a `match` folder. If you want expansion in every app, not only the one's specified in `config`, remove the `_` from the beginning of the `match` file names. The `_` tells espanso not to enable by default.
 
 ## Config
 
