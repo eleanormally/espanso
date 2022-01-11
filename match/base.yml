@@ -10,3 +10,6 @@ matches:
         type: date
         params:
           format: "%m/%d/%Y"
+
+  - trigger: ":th:"
+    replace: "þ"
