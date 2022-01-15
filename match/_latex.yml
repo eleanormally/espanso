@@ -50,7 +50,7 @@ matches:
   - trigger: ";phl"
     replace: "\\oint \\limits_{C}"
 
-  - regex: "(?P<char>.)bar"
+  - regex: ";(?P<char>.)bar"
     replace: "\\bar{{{char}}}"
 
   - trigger: ";xt"
