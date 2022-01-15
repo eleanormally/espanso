@@ -137,3 +137,10 @@ matches:
   - regex: ";(?P<num>.*)/(?P<den>.*) "
     replace: "\\frac{ {{num}} }{ {{den}} }"
 
+  - trigger: ";mx"
+    replace: |
+              \[
+                \begin{bmatrix}
+                  $|$
+                \end{bmatrix}
+              \]
