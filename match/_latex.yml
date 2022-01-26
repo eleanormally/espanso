@@ -7,6 +7,9 @@ matches:
               \usepackage{amsmath} 
               \usepackage{graphicx}
 
+  - trigger: ";$"
+    replace: "$$$|$$$"
+
   # special characters
   - trigger: ";nb"
     replace: "\\nabla"
@@ -65,6 +68,11 @@ matches:
   - regex: ";(?P<char>.*)hat"
     replace: "\\hat{{{char}}}"
 
+  - trigger: "<=>"
+    replace: "\Leftrightarrow"
+
+  - trigger: ";pp"
+    replace: "_{\\perp}"
   # shorthand
 
   - trigger: "r3c"
@@ -73,7 +81,7 @@ matches:
   - trigger: "r2c"
     replace: "(x,y)"
   
-  - trigger: ";vr"
+  - trigger: ";vc"
     replace: "\\vec{$|$}"
 
   - trigger: ";ccoordz"
