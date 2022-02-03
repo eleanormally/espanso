@@ -103,13 +103,13 @@ matches:
   - trigger: "tan("
     replace: "\\tan($|$)"
 
-  - trigger: "sint"
+  - trigger: ";sint"
     replace: "\\sin\\theta"
 
-  - trigger: "cost"
+  - trigger: ";cost"
     replace: "\\cos\\theta"
 
-  - trigger: "tant"
+  - trigger: ";tant"
     replace: "\\tan\\theta"
 
   - trigger: ";ttil"
@@ -143,7 +143,7 @@ matches:
     replace: "\\overrightarrow{ \\nabla {{func}}} " 
 
   - regex: ";(?P<num>.*)/(?P<den>.*) "
-    replace: "\\frac{ {{num}} }{ {{den}} }"
+    replace: "\\frac{ {{num}} }{ {{den}} } "
 
   - trigger: ";mx"
     replace: |
@@ -152,3 +152,24 @@ matches:
                   $|$
                 \end{bmatrix}
               \]
+
+
+  # Phyics
+
+  - trigger: ";ug"
+    replace: "mgh"
+
+  - trigger: ";kt"
+    replace: "\\frac{1}{2}mv^2"
+
+  - trigger: ";ntor"
+    replace: "\\Sigma \\tau = I\\alpha"
+
+  - trigger: ";nlaw"
+    replace: "\\Sigma F = ma"
+
+  - trigger: ";mee"
+    replace: "K_i + U_{gi} + U_{si} + W_e = K_f + U_{gf} + U_{sf}"
+
+  - trigger: ";kr"
+    replace: "\\frac{1}{2}I\\alpha^2"
