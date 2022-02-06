@@ -6,6 +6,12 @@ matches:
     replace: |
               \usepackage{amsmath} 
               \usepackage{graphicx}
+              \makeatletter
+              \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+              \hskip -\arraycolsep
+              \let\@ifnextchar\new@ifnextchar
+              \array{#1}}
+              \makeatother
 
   - trigger: ";$"
     replace: "$$$|$$$"
@@ -148,9 +154,9 @@ matches:
   - trigger: ";mx"
     replace: |
               \[
-                \begin{bmatrix}
-                  $|$
-                \end{bmatrix}
+              \begin{bmatrix}
+              $|$
+              \end{bmatrix}
               \]
 
 
