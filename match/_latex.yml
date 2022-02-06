@@ -159,6 +159,22 @@ matches:
               \end{bmatrix}
               \]
 
+  - trigger: ";m3x"
+    replace: |
+              \[
+              \begin{bmatrix}
+              [ccc|c]
+              $|$
+              \end{bmatrix}
+              \]
+  - trigger: ";m2x"
+    replace: |
+              \[
+              \begin{bmatrix}
+              [cc|c]
+              $|$
+              \end{bmatrix}
+              \]
 
   # Phyics
 
