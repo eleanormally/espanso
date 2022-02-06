@@ -159,6 +159,15 @@ matches:
               \end{bmatrix}
               \]
 
+  - trigger: ";m4x"
+    replace: |
+              \[
+              \begin{bmatrix}
+              [cccc|c]
+              $|$
+              \end{bmatrix}
+              \]
+
   - trigger: ";m3x"
     replace: |
               \[
