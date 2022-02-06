@@ -151,6 +151,12 @@ matches:
   - regex: ";(?P<num>.*)/(?P<den>.*) "
     replace: "\\frac{ {{num}} }{ {{den}} } "
 
+  - trigger: ";ix"
+    replace: |
+              \begin{bmatrix}
+              $|$
+              \end{bmatrix}
+
   - trigger: ";mx"
     replace: |
               \[
