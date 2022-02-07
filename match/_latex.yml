@@ -16,6 +16,9 @@ matches:
   - trigger: ";$"
     replace: "$$$|$$$"
 
+  - regex: ";(?P<char>.)sub"
+    replace: "\\subsection*{{{char}}}"
+
   # special characters
   - trigger: ";nb"
     replace: "\\nabla"
