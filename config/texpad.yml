@@ -1,0 +1,4 @@
+filter_exec: "Texpad"
+
+extra_includes:
+  - "../match/_latex.yml"
