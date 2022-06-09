@@ -4,6 +4,7 @@ matches:
   # my latex config
   - trigger: ";startfile"
     replace: |
+              \documentclass[11pt]{article}
               \usepackage{amsmath} 
               \usepackage{graphicx}
               \makeatletter
@@ -12,6 +13,15 @@ matches:
               \let\@ifnextchar\new@ifnextchar
               \array{#1}}
               \makeatother
+              \author{Kiernan Olson}
+              \title{}
+
+              \begin{document}
+
+              \maketitle
+
+              $|$
+              \end{document}
 
   - trigger: ";$"
     replace: "$$$|$$$"
@@ -72,9 +82,9 @@ matches:
     replace: "\\cdot"
 
   - trigger: "!="
-    replace: "\neq"
+    replace: "\\neq"
 
-  - regex: ";(?P<char>.*)hat"
+  - regex: ";(?P<char>.)hat"
     replace: "\\hat{{{char}}}"
 
   - trigger: "<=>"
@@ -99,7 +109,8 @@ matches:
   - trigger: ";scoord"
     replace: "\\{(\\rho, \\theta, \\phi): $|$ \\leq \\rho \\leq , \\leq \\theta \\leq , \\leq \\phi \\leq \\}"
   
-
+  - trigger: ";iv"
+    replace: "^{-1}"
 
   #functions
 
@@ -127,11 +138,11 @@ matches:
   - trigger: ";til"
     replace: "\\int \\limits_{0}^{\\pi}"
 
-  - trigger: ";ilim"
-    replace: "\\lim_{\\to\\infty}"
+  - trigger: ";liim"
+    replace: "\\lim_{$|$\\to\\infty}"
 
   - trigger: ";lim"
-    replace: "\\lim_{\\to $|$}"
+    replace: "\\lim_{$|$\\to}"
 
   - trigger: ";il"
     replace: "\\int \\limits_{$|$}^{}"
@@ -160,6 +171,12 @@ matches:
               $|$
               \end{bmatrix}
 
+  - trigger: ";dx"
+    replace: |
+              \begin{vmatrix}
+              $|$
+              \end{vmatrix}
+
   - trigger: ";mx"
     replace: |
               \[
@@ -167,6 +184,8 @@ matches:
               $|$
               \end{bmatrix}
               \]
+
+
 
   - trigger: ";m4x"
     replace: |
@@ -185,6 +204,23 @@ matches:
               $|$
               \end{bmatrix}
               \]
+
+  - trigger: ";i3x"
+    replace: |
+              \begin{bmatrix}
+              [ccc|c]
+              $|$
+              \end{bmatrix}
+
+  - trigger: ";m33x"
+    replace: |
+              \[
+              \begin{bmatrix}
+              [ccc|ccc]
+              $|$
+              \end{bmatrix}
+              \]
+
   - trigger: ";m2x"
     replace: |
               \[
@@ -193,6 +229,13 @@ matches:
               $|$
               \end{bmatrix}
               \]
+
+  - trigger: ";i2x"
+    replace: |
+              \begin{bmatrix}
+              [cc|c]
+              $|$
+              \end{bmatrix}
 
   # Phyics
 
